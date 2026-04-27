@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import t, f_oneway
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8') if 'seaborn-v0_8' in plt.style.available else plt.style.use('default')
 
 class EuclideanMethod():
     """Determining LCG and Random Takers by calculating optimum p-value"""
