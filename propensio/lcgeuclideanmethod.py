@@ -7,11 +7,9 @@
 
 from os import name
 from matplotlib.markers import MarkerStyle
-from numpy.core.fromnumeric import size
 import pandas as pd
 import math
 import numpy as np
-from pandas.io.pytables import incompatibility_doc
 import matplotlib.pyplot as plt
 from scipy.stats import t, f_oneway
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
@@ -497,7 +495,7 @@ class MapEuclideanMethod(EuclideanMethod):
             dict_nontakes_ED[label[idx]] = df_ed.copy() 
 
             info = cls.info()
-            info.set_axis(['variable_takers','{}_info'.format(label[idx])], axis=1, inplace=True)
+            info = info.set_axis(['variable_takers', '{}_info'.format(label[idx])], axis=1)
             dict_info[label[idx]] = info
             print(info)
             
@@ -617,7 +615,7 @@ class EuclideanMethodAscDesc():
         temp_x = abs(df.asc_delta_avg) <= abs(df.desc_delta_avg)
         df['opt_sort'] = temp_x.apply(lambda x : 'asc' if x == True else 'desc')
         self.df_asc_desc_avg = df.copy() 
-        df_corr = df.corr()
+        df_corr = df.corr(numeric_only=True)
         asc_pearson = df_corr.loc['takers_avg']['asc_nontakers_avg']
         desc_pearson = df_corr.loc['takers_avg']['desc_nontakers_avg']
         self.asc_person = asc_pearson
@@ -650,7 +648,7 @@ class EuclideanMethodAscDesc():
                 dict_df_tukey[package] = self.desc.dict_df_tukey[package].copy()
                 dict_tukey[package] = self.desc.dict_tukey[package]
 
-            summary[package] = tmp_series.append(pd.Series({'opt_sort_method':opt_sort}))
+            summary[package] = pd.concat([tmp_series, pd.Series({'opt_sort_method': opt_sort})])
         
         self.df_summary = summary.copy()
         self.dict_df_result = dict_df_result

@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
-Name: causalinference_azkaram
-Version: 1.0.1
+Name: propensio
+Version: 1.0.4
 Summary: Causal inference using Propensity Score Matching and Euclidean LCG method
 Author-email: azkarohbiya <azkarohbiya@gmail.com>
 License: MIT License
@@ -25,15 +25,15 @@ License: MIT License
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
         
-Requires-Python: >=3.7
+Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
-Requires-Dist: pandas>=1.1.5
-Requires-Dist: numpy>=1.18.5
-Requires-Dist: scipy>=1.2.0
-Requires-Dist: matplotlib>=3.1.0
-Requires-Dist: statsmodels>=0.8.0
-Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: statsmodels>=0.13.0
+Requires-Dist: scikit-learn>=1.0.0
 Requires-Dist: plotly>=5.0.0
 Dynamic: license-file
 

@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import os
-import seaborn as sns
 from sklearn.linear_model import LogisticRegression, LinearRegression, HuberRegressor, RANSACRegressor
 from sklearn.neighbors import NearestNeighbors
 from statsmodels.stats.multicomp import pairwise_tukeyhsd

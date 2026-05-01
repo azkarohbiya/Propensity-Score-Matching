@@ -1,6 +1,5 @@
 # Causal Inference using PSM
 
-
 # Background
 Propensity score matching is a statistical technique used to estimate the effect of a treatment or intervention on an outcome of interest. It is commonly used in observational studies, where the assignment of treatment or exposure to a particular group is not randomized.
 
@@ -9,16 +8,16 @@ The idea behind propensity score matching is to balance the characteristics of t
 Overall, propensity score matching is a useful tool for researchers to make causal inferences in observational studies, although it is important to consider the limitations and assumptions of this method.
 
 # Installation Guide
-This function has been uploaded to [pypi](https://pypi.org/project/causal-inference-aagm/) so you can type on your prompt as code below
+This function has been uploaded to [pypi](https://pypi.org/project/propensio/) so you can type on your prompt as code below
 ```bash
-pip install causal-inference-aagm
+pip install propensio
 ```
 Then import the library
 ```python
-from causalinference_aagm.matching import PropensityScoreMatch
+from propensio.matching import PropensityScoreMatch
 ```
 
-If error, download (matching.py)[tsel_aagm/matching.py]
+If error, download (matching.py)[propensio/matching.py]
 then
 ```
 from matching import *
@@ -27,7 +26,7 @@ from matching import *
 # Requirements Library
 This python requires related package more importantly python_requires='>=3.1', so that package can be install Make sure the other packages meet the requirements below
 - pandas>=1.1.5,
-- numpy>=1.18.5,
+- numpy>=1.18.5,<2.0.0
 - scipy>=1.2.0,
 - matplotlib>=3.1.0,
 - statsmodels>=0.8.0
@@ -56,7 +55,7 @@ For Analysis:
 # Example Usage
 Importing libraries
 ```python
-from causalinference_aagm.matching import PropensityScoreMatch as psm
+from propensio.matching import PropensityScoreMatch as psm
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
