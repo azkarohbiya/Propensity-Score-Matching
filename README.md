@@ -7,6 +7,7 @@ The idea behind propensity score matching is to balance the characteristics of t
 
 Overall, propensity score matching is a useful tool for researchers to make causal inferences in observational studies, although it is important to consider the limitations and assumptions of this method.
 
+
 # Installation Guide
 This function has been uploaded to [pypi](https://pypi.org/project/propensio/) so you can type on your prompt as code below
 ```bash
@@ -133,3 +134,8 @@ plt.show()
 ---
 Rather than direct comparison between matched test variant and control, you better try use Average Treatment Effect for deeper anaylysis. Here, medium article that I recommend
 [ATE Causal Inference](https://medium.com/grabngoinfo/ate-vs-cate-vs-att-vs-atc-for-causal-inference-998a577f2f8c)
+
+# Real Applicatn
+
+This was applied for marketing cases when dealing with above-the-line campaigns. This quite works to handle revenue dilution, more plausible incremental impact. Thanks to Rizli Anshari, Amel Dayani, Bintang who have also contributed to this development
+
